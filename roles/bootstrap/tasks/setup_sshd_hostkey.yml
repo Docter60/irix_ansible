@@ -21,7 +21,7 @@
 - name: Make sure the known hosts file exists
   become: false
   file: 
-    path: /home/vagrant/.ssh/known_hosts 
+    path: /home/pi/.ssh/known_hosts 
     state: touch
   delegate_to: localhost
   when: uname == 'Linux'
@@ -29,7 +29,7 @@
 - name: ensure target hostkey exists
   become: false
   lineinfile:
-    dest: /home/vagrant/.ssh/known_hosts
+    dest: /home/pi/.ssh/known_hosts
     create: yes
     state: present
     line: "{{ lookup('pipe', 'ssh-keyscan ' + ansible_host) }}"
