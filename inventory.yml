@@ -2,11 +2,11 @@
 ungrouped:
   hosts:
     challenge:
-      ansible_host:   192.168.251.41
+      ansible_host:   192.168.1.152
       become-method:  su
-      default_gw:     192.168.251.1
-      nameserver:     75.75.75.75
-      domain:         diller.org
+      default_gw:     192.168.1.1
+      nameserver:     1.1.1.1
+      domain:         home.local
       tzone:          EST5EDT
   vars:
     ansible_python_interpreter:   /usr/nekoware/bin/python

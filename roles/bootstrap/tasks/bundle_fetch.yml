@@ -15,7 +15,7 @@
   # For SGUG_RSE - the base packages for /usr/sgug
   become: no
   get_url: 
-    url: "{{ fetchfrom }}/sgug/{{ item }}"
+    url: "https://github.com/sgidevnet/sgug-rse/releases/download/v0.0.7beta/{{ item }}"
     dest: "roles/bootstrap/files/{{ item }}"
   delegate_to: 127.0.0.1
   with_items:
